@@ -1,8 +1,19 @@
 import React from "react";
 import ResponsiveAppBar from "../navbar/Navbar";
 import { Grid, TextField, Button, Typography, Box } from "@mui/material";
+import { useState } from "react";
 
 function Register() {
+    const handleSubmit = (event) => {
+        const formData = new formData();
+        const username = "";
+        const fullname = "";
+        const email = "";
+        const phone = "";
+        const password = "";
+        const confirmpassword = "";
+    };
+
     return (
         <div>
             <ResponsiveAppBar />
@@ -10,7 +21,7 @@ function Register() {
                 <Typography variant="h4" align="center" gutterBottom>
                     Register for Managing ...
                 </Typography>
-                <form>
+                <form onSubmit={handleSubmit()}>
                     <Grid container spacing={2} maxWidth="sm" margin="auto">
                         <Grid item xs={12}>
                             <TextField
