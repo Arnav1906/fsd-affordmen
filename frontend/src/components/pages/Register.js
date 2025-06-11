@@ -1,50 +1,81 @@
 import React from "react";
 import ResponsiveAppBar from "../navbar/Navbar";
+import { Grid, TextField, Button, Typography, Box } from "@mui/material";
 
 function Register() {
     return (
         <div>
             <ResponsiveAppBar />
-            <h1>Register for Managing ....</h1>
-            <form>
-                <div>
-                    <label htmlFor="username">Username:</label>
-                    <input type="text" id="username" name="username" required />
-                </div>
-                <div>
-                    <label htmlFor="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname" required />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div>
-                    <label htmlFor="phone">Phone No:</label>
-                    <input type="tel" id="phone" name="phone" required />
-                </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="confirmPassword">Confirm Password:</label>
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        name="confirmPassword"
-                        required
-                    />
-                </div>
-                <div>
-                    <input type="submit" value="Register" />
-                </div>
-            </form>
+            <Box sx={{ padding: 4 }}>
+                <Typography variant="h4" align="center" gutterBottom>
+                    Register for Managing ...
+                </Typography>
+                <form>
+                    <Grid container spacing={2} maxWidth="sm" margin="auto">
+                        <Grid item xs={12}>
+                            <TextField
+                                label="Username"
+                                name="username"
+                                fullWidth
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                label="Full Name"
+                                name="fullname"
+                                fullWidth
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                label="Email"
+                                type="email"
+                                name="email"
+                                fullWidth
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                label="Phone No"
+                                type="tel"
+                                name="phone"
+                                fullWidth
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                label="Password"
+                                type="password"
+                                name="password"
+                                fullWidth
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                label="Confirm Password"
+                                type="password"
+                                name="confirmPassword"
+                                fullWidth
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12} textAlign="center">
+                            <Button
+                                type="submit"
+                                variant="contained"
+                                color="primary"
+                            >
+                                Register
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </form>
+            </Box>
         </div>
     );
 }
